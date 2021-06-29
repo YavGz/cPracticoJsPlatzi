@@ -1,0 +1,23 @@
+{
+  "name": "javascriptpractico",
+  "version": "1.0.0",
+  "description": "Practicas del Curso de javascript de platzi.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Javier-GT-Yav/cPracticoJsPlatzi.git"
+  },
+  "keywords": [
+    "Practicas",
+    "Javascript"
+  ],
+  "author": "Javier Gutierrez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Javier-GT-Yav/cPracticoJsPlatzi/issues"
+  },
+  "homepage": "https://github.com/Javier-GT-Yav/cPracticoJsPlatzi#readme"
+}
