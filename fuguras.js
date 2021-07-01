@@ -19,7 +19,6 @@ const diametroCirculo = radioCirculo *2;
 const PI = Math.PI ;
 const perimetroCirculo = diametroCirculo * PI;
 const areaCirculo = PI * (radioCirculo * radioCirculo); 
-console.log(areaCirculo);
 
 // ciurculo variables 
 
@@ -40,9 +39,9 @@ console.log(
   console.log(`El área del triangulo es: 
   ${areaTriangulo} cm^2`
   );
-  console.groupEnd();
+console.groupEnd();
 // ----/Logs triangulos
-  
+
 // logs cuadrados ----
 console.group("Cuadrados");
 console.log(`Los lados del cuadrado miden ${ladoCuadro} cm`);
@@ -52,4 +51,11 @@ console.groupEnd();
 // ----/logs cuadrados 
 
 // logs Circulo ----
+console.group("Circulo");
+console.log(`PI es igual a: ${PI}`);
+console.log(`EL radio del circulo es igual a: ${radioCirculo} cm`);
+console.log(`EL diametro del circulo es: ${diametroCirculo} cm`)
+console.log(`EL perimetro del circulo es: ${perimetroCirculo}]`);
+console.log(`EL área del circulo es: ${areaCirculo} cm^2`);
+console.groupEnd()
 // ----/logs Circulo
