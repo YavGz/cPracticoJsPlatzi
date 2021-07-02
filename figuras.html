@@ -6,31 +6,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./figuras.css">  
   <title>Figuras Geoméricas</title>
 </head>
 <body>
-  <header class="container navbar-darck">
+  <header class="container-fluid navbar-light bg-dark mb-3 text-center" style="color: #f3f3f3;">
     <div class="row">
       <div class="col">
         <h1>Figuras Geoméricas</h1>
-        <p>Este es el primer taller del curso práctico de JavaScri()pt<p>
+        <p>Este es el primer taller del curso práctico de JavaScript<p>
       </div>
     </div>
   </header>
 
-  <section class="formulario container">
-    <h2>Calcula el área y el perimetro de un cuadrado</h2>
-    <form action="">
-      <label for="InputCuadrado"> Escribe cuanto mide cada lado de tu cuadrado
-      </label>
-      <input id="InputCuadrado" type="number" placeholder="Numero" required>
-      <button type="button" onclick="calcularPerimetroCuadrado()">Calcular el perímetro</button>
-      <button type="button" onclick="calcularAreaCuadrado()">Calcular el área</button>
-    </form>
-    
-  </section>
+  <section class="container">
+    <div class="row">
+      <div class="col col-md-6">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h3 class="card-title">Calcula el área y el perimetro de un cuadrado</h3>
+            <form action="">
+              <label class="card-subtitle mb-2 form-label" for="InputCuadrado"> Escribe cuanto mide cada lado de tu cuadrado
+              </label>
+              <input id="InputCuadrado" class="form-control form-group mb-3" type="number" placeholder="Numero" required>
+              <button type="button" class="btn-outline-primary col-5 offset-1" onclick="calcularPerimetroCuadrado()">Calcular el perímetro</button>
+              <button type="button" class="btn-outline-primary col-5"  onclick="calcularAreaCuadrado()">Calcular el área</button>
+            </form>
+          </div>
+        </div>
+      </div>  
+      <div class="col col-md-6">
+        <div class="card">
+          <div class="card-body">
 
+            
+            <h3 class="card-title">Que medidas quieres dar a tu triangulo?</h3>
+            <form action="">
+              <label for="inputsTriangulo" class="card-subtitle mb-3">Proporsiona cada uno de los lados</label>
+              <input id="inputsTriangulo" class="form-control form-group mb-3" type="number"  placeholder="Lado 1" required>
+              <input id="ladoTriangulo2" class="form-control form-group mb-3" type="number" placeholder="Lado 2" required>
+              <input id="baseTriangulo" class="form-control form-group mb-3" type="number" placeholder="Base" required>
+              <button type="button" class="btn-outline-primary col-5 offset-1" onclick="calcularAlturaTriangulo()" >Calcular la altura</button>
+              <button type="button" class="btn-outline-primary col-5" onclick="calcularPerimetroTriangulo()">Calcular el perimetro</button>
+            </form>
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    
   <footer>
 
   </footer>

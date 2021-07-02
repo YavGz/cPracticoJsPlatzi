@@ -1,0 +1,9 @@
+.btn-outline-primary {
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+.card {
+  height: 100%;
+  align-items: center;
+}

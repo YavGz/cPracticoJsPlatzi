@@ -16,20 +16,17 @@ console.groupEnd();
 
 
 // Logs triangulos ----
-console.group("triangulos");
 
-const perimetroTriangulo = ( lado1 = 1, lado2 = 1, base = 1) => lado1 + lado2 + base;
+const perimetroTriangulo = ( lado1 = 0, lado2 = 0, base = 0) => {
+  return lado1 + lado2 + base;
+}
 
 const areaTriangulo = (base = 2,altura = 1.5) => (base * altura) / 2;
-
-console.groupEnd();
-
 
 const alturaTriangulo = (lado1, lado2, base) => {
   if (lado1 === lado2) {
     const altura = Math.sqrt( (lado1 * lado1) - ( base / 2) ) ;
     return altura;
-    // console.log(`La altura del triangulo es ${altura}`);
   } else {
     console.log(`El triangulo que describes no es isósceles`);
   }
@@ -38,7 +35,6 @@ const alturaTriangulo = (lado1, lado2, base) => {
 
 
 // logs Circulo ----
-console.group("Circulo");
 
 const diametroCirculo = (radio = 2) => radio * 2;
 
@@ -64,23 +60,34 @@ const calcularPerimetroCuadrado = () => {
   const value = input.value;
   // llamar a la funcion para el calculo con el valor del input
   const perimetro = perimetroCuadrado(value);
-  alert(perimetro);
+  alert(`El perimetro del cuadrado es: ${perimetro} cm`);
 };
 
 const calcularAreaCuadrado = (params) => {
   const input = document.getElementById("InputCuadrado");
   const value = input.value;
   const area = areaCuadrado(value);
-  alert(area);
+  alert(`El área del cuadrado es: ${area} cm^2`);
 }
 
-const calcularArturaTriangulo = () => {
-  const input1 = document.getElementById("");
+const calcularAlturaTriangulo = () => {
+  const input = document.getElementById("inputsTriangulo");
   const value = input.value;
-  const input2 = document.getElementById("");
-  const value2 = input2.value2;
-  const input3 = document.getElementById("");
-  const value3 = input3;
+  const input2 = document.getElementById("ladoTriangulo2");
+  const value2 = input2.value;
+  const input3 = document.getElementById("baseTriangulo");
+  const value3 = input3.value;
   const altura = alturaTriangulo(value, value2, value3);
-  alert (`La altura del triangulo es ${altura}`);
+  alert (`La altura del triangulo es: ${altura} cm`);
+}
+
+const calcularPerimetroTriangulo = () => {
+  const inputP = document.getElementById("inputsTriangulo");
+  const valueP = inputP.value;
+  const inputP2 = document.getElementById("ladoTriangulo2");
+  const valueP2 = inputP2.value;
+  const inputP3 = document.getElementById("baseTriangulo");
+  const valueP3 = inputP3.value;
+  const perimetroTotal = perimetroTriangulo(Number.parseInt(valueP), Number.parseInt(valueP2), Number.parseInt(valueP3)) ;
+  alert(`El perimetro del triangulo es: ${perimetroTotal} cm`)
 }
