@@ -23,6 +23,17 @@ const perimetroTriangulo = ( lado1 = 1, lado2 = 1, base = 1) => lado1 + lado2 + 
 const areaTriangulo = (base = 2,altura = 1.5) => (base * altura) / 2;
 
 console.groupEnd();
+
+
+const alturaTriangulo = (lado1, lado2, base) => {
+  if (lado1 === lado2) {
+    const altura = Math.sqrt( (lado1 * lado1) - ( base / 2) ) ;
+    return altura;
+    // console.log(`La altura del triangulo es ${altura}`);
+  } else {
+    console.log(`El triangulo que describes no es isósceles`);
+  }
+};
 // ----/Logs triangulos
 
 
@@ -37,6 +48,8 @@ const circunferencia = (radio = 2) => {
 }
 
 const areaCirculo= (radio = 2) => (radio * radio) * PI;
+
+// calculo de alturaTriangulo
 
 // ----/logs Circulo
 
@@ -59,4 +72,15 @@ const calcularAreaCuadrado = (params) => {
   const value = input.value;
   const area = areaCuadrado(value);
   alert(area);
+}
+
+const calcularArturaTriangulo = () => {
+  const input1 = document.getElementById("");
+  const value = input.value;
+  const input2 = document.getElementById("");
+  const value2 = input2.value2;
+  const input3 = document.getElementById("");
+  const value3 = input3;
+  const altura = alturaTriangulo(value, value2, value3);
+  alert (`La altura del triangulo es ${altura}`);
 }
