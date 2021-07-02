@@ -39,3 +39,24 @@ const circunferencia = (radio = 2) => {
 const areaCirculo= (radio = 2) => (radio * radio) * PI;
 
 // ----/logs Circulo
+
+
+// Interaccion con HTMl
+
+// declarar funcion para obtener elemento 
+const calcularPerimetroCuadrado = () => {
+  // obtener el elemento 
+  const input = document.getElementById("InputCuadrado");
+  // obtener el valor del elemento
+  const value = input.value;
+  // llamar a la funcion para el calculo con el valor del input
+  const perimetro = perimetroCuadrado(value);
+  alert(perimetro);
+};
+
+const calcularAreaCuadrado = (params) => {
+  const input = document.getElementById("InputCuadrado");
+  const value = input.value;
+  const area = areaCuadrado(value);
+  alert(area);
+}
