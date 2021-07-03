@@ -19,13 +19,12 @@
       </div>
     </div>
   </header>
-
   <section class="container">
     <div class="row">
-      <div class="col col-md-6">
+      <div class="col col-12 col-md-6 mb-3">
         <div class="card mb-3">
-          <div class="card-body">
-            <h3 class="card-title">Calcula el área y el perimetro de un cuadrado</h3>
+          <div class="card-body ps-4 pe-4" >
+            <h3 class="card-title">Que medidas quieres darle a tu cuadrado?</h3>
             <form action="">
               <label class="card-subtitle mb-2 form-label" for="InputCuadrado"> Escribe cuanto mide cada lado de tu cuadrado
               </label>
@@ -36,24 +35,44 @@
           </div>
         </div>
       </div>  
-      <div class="col col-md-6">
+      <div class="col col-12 col-md-6 mb-3">
         <div class="card">
-          <div class="card-body">
-
-            
+          <div class="card-body ps-4 pe-4">
             <h3 class="card-title">Que medidas quieres dar a tu triangulo?</h3>
             <form action="">
               <label for="inputsTriangulo" class="card-subtitle mb-3">Proporsiona cada uno de los lados</label>
               <input id="inputsTriangulo" class="form-control form-group mb-3" type="number"  placeholder="Lado 1" required>
-              <input id="ladoTriangulo2" class="form-control form-group mb-3" type="number" placeholder="Lado 2" required>
-              <input id="baseTriangulo" class="form-control form-group mb-3" type="number" placeholder="Base" required>
+              <div class="row">
+                <div class="col">
+                  <input id="ladoTriangulo2" class="form-control form-triangle form-group mb-3 col-6" type="number" placeholder="Lado 2" required>
+                </div>
+                <div class="col">
+                  <input id="baseTriangulo" class="form-control form-group mb-3" type="number" placeholder="Base" required></input>
+                </div>
+              </div>
               <button type="button" class="btn-outline-primary col-5 offset-1" onclick="calcularAlturaTriangulo()" >Calcular la altura</button>
               <button type="button" class="btn-outline-primary col-5" onclick="calcularPerimetroTriangulo()">Calcular el perimetro</button>
             </form>
-            
-            
           </div>
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-16 col-md-6 offset-md-3">
+        <form action="" class="card">
+          <div class="card-body ps-4 pe-4">
+            <h3 class="card-title">Que medidas quieres darle a tu circulo?</h3>
+            <form>
+              <label for="" class="card-subtitle form-label">
+                Proporsiona la medida del radio de tu circulo  
+              </label>
+              <input id="inputCircle" type="number" class="form-control mb-3 mt-3" placeholder="Radio del circulo">
+              <button type="button"  class="btn btn-outline-primary col-5 offset-1" onclick="calcPerimetrocircle()">Calcular perimetro</button>
+              <button type="button" class="btn btn-outline-primary col-5" onclick="calcAreaCircle()">Calcular el área</button>
+            </form>
+          </div>
+
+        </form>
       </div>
     </div>
   </section>
