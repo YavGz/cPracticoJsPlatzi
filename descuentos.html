@@ -11,40 +11,46 @@
 </head>
 <body>
   <header class="mb-2">
-    <!-- As a link -->
     <nav class="navbar navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand btn btn-outline-secondary" href="#">Inicio</a>
+      <div class="container">
+        <div class="col">
+          <a class="navbar-brand btn btn-outline-secondary" href="#">Inicio</a>
+        </div>
       </div>
     </nav> 
   </header>
   <main class="container">
     <div class="row">
       <div class="col text-center mb-2">
-        <small>Calcula los</small>
-        <h1 class="h2">Porcentajes y descuentos</h1>
-        <small>De tus articulos y marcas favoritas (o culquier cosa que se te ocurra)</small>
+        <h1 class="h2">Calcula el precio</h1>
+        <small> A pagar de tus articiculos con descuento(o culquier cosa que se te ocurra)</small>
       </div>
     </div>
     <div class="row">
-      <div class="col-12 ">
+      <div class="col-12 col-md-6 offset-md-3 ">
         <div class="card">
-
           <form class="card-body " action="">
-            <label for="OriginalPrice">
-              Inserta el precio original y el descuento a aplicar
+            <label for="OriginalPrice" class="mb-2">
+              Escribe el precio de tu producto:
             </label>
-            <div class="input-group">
+            <div class="input-group mb-2">
               <span class="input-group-text" id="basic-addon1">$</span>
-              <input id="OriginalPrice" type="number" placeholder="Precio origial">
+              <input id="OriginalPrice" type="number" class="form-control" placeholder="Precio" aria-label="Precio">
             </div>
-            <div class="input-group">
+            <label for="Discount" class="mb-2">
+              Escribe el descuento de tu producto:
+            </label>
+            <div class="input-group mb-3">
               <span class="input-group-text" id="basic-addon1">%</span>
-              <input id="Off" type="number" placeholder="Descuento">
+              <input id="Discount" type="number" class="form-control" placeholder="Descuento">
             </div>
-            <button type="button" onclick="calcPriceOffer()">Calcular</button>
+
+            <button type="button" class="btn btn-outline-primary col-4 mb-3 me-1 offset-2" onclick="calcPriceOffer()">Calcular</button>
+            <button type="button" class="btn btn-outline-secondary col-4 mb-3" onclick="cleanInputs()">Limpiar</button>
+            <div id="priceResult" class="alert alert-primary" role="alert">
+
+            </div>
           </form>
-          
         </div>
       </div>
     </div>

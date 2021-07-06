@@ -5,11 +5,20 @@ function priceWithOff(price, off) {
 }
 
 const calcPriceOffer = () => {
-  const input = document.getElementById("OriginalPrice")
-  const input2 = document.getElementById("Off")
-  const price = input.value;
-  const off = input2.value;
-  const total = priceWithOff(price, off);
+  // inputs y valores
+  const priceInput = document.getElementById("OriginalPrice");
+  const discountInput = document.getElementById("Discount");
+  const priceValue = priceInput.value;
+  const discountValue = discountInput.value;
+  const total = priceWithOff(priceValue, discountValue);
+  // input para respuesta
+  const priceResult = document.getElementById("priceResult");
+  priceResult.innerHTML = `El precio a pagar con el descuento es: $${total} MXN`;
+}
 
-  alert(`El precio total con su descuento es de: $ ${total} MXN`);
+const cleanInputs = () => {
+  const priceInput = document.getElementById("OriginalPrice").value = "";
+  const discountInput = document.getElementById("Discount").value = "";
+  const priceResult = document.getElementById("priceResult");
+  priceResult.innerText = "";
 }
