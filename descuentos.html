@@ -33,7 +33,7 @@
             <label for="OriginalPrice" class="mb-2">
               Escribe el precio de tu producto:
             </label>
-            <div class="input-group mb-2">
+            <div class="input-group mb-3">
               <span class="input-group-text" id="basic-addon1">$</span>
               <input id="OriginalPrice" type="number" class="form-control" placeholder="Precio" aria-label="Precio">
             </div>
@@ -44,11 +44,15 @@
               <span class="input-group-text" id="basic-addon1">%</span>
               <input id="Discount" type="number" class="form-control" placeholder="Descuento">
             </div>
+            <label for="InputCoupon" class="mb-2">
+              Escribe el cupón de descuento para tu producto:
+            </label>
+              <input id="InputCoupon" type="number" class="form-control" placeholder="Cupón"/>
 
-            <button type="button" class="btn btn-outline-primary col-4 mb-3 me-1 offset-2" onclick="calcPriceOffer()">Calcular</button>
-            <button type="button" class="btn btn-outline-secondary col-4 mb-3" onclick="cleanInputs()">Limpiar</button>
+            <button type="button" class="btn btn-outline-primary col-4 mb-3 me-1 offset-2 mt-md-3" onclick="calcPriceOffer()">Calcular</button>
+            <button type="button" class="btn btn-outline-secondary col-4 ms-1 mb-3 mt-md-3" onclick="cleanInputs()">Limpiar</button>
+            <button type="button" class="btn btn-outline-primary col-4 mb-3 offset-md-4" onclick="functio()">Validar Cupón</button>
             <div id="priceResult" class="alert alert-primary" role="alert">
-
             </div>
           </form>
         </div>
