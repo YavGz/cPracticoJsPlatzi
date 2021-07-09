@@ -45,13 +45,13 @@
               <input id="Discount" type="number" class="form-control" placeholder="Descuento">
             </div>
             <label for="InputCoupon" class="mb-2">
-              Escribe el cupón de descuento para tu producto:
+              Si no ves un descuento puedes usar un codigo:
             </label>
-              <input id="InputCoupon" type="number" class="form-control" placeholder="Cupón"/>
-
-            <button type="button" class="btn btn-outline-primary col-4 mb-3 me-1 offset-2 mt-md-3" onclick="calcPriceOffer()">Calcular</button>
-            <button type="button" class="btn btn-outline-secondary col-4 ms-1 mb-3 mt-md-3" onclick="cleanInputs()">Limpiar</button>
-            <button type="button" class="btn btn-outline-primary col-4 mb-3 offset-md-4" onclick="functio()">Validar Cupón</button>
+              <input id="InputCoupon" type="text" class="form-control" placeholder="Codigo de descuento"/>
+            <!-- botones del formulario  -->
+            <button type="button" class="btn btn-outline-primary col-4 mb-2 mb-md-3 offset-2 mt-3" onclick="calcPriceOffer()">Calcular</button>
+            <button type="button" class="btn btn-outline-secondary col-4 mb-2 mb-md-3 mt-3" onclick="cleanInputs()">Limpiar</button>
+            <button type="button" class="btn btn-outline-primary col-6 offset-3 mb-3" onclick="discountCoupon()">Validar Cupón</button>
             <div id="priceResult" class="alert alert-primary" role="alert">
             </div>
           </form>
