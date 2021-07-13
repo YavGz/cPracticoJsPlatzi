@@ -20,15 +20,17 @@ const calcMediaAritmetica = (list) => {
 // Cal mediana 
 
 const listMediana = [
-  100,
   200,
   300,
-  500,
+  100,
   600,
-  // 400000,
+  500,
+  2000,
 ];
 
-const mitadLista = parseInt(listMediana.length / 2) ;
+const ordenedList = listMediana.sort( (a,b) => a-b ); 
+
+const listToParse = parseInt(ordenedList.length / 2) ;
 
 const esPar = (number) =>{
   if (number % 2 === 0) {
@@ -40,12 +42,12 @@ const esPar = (number) =>{
 
 let mediana;
 
-if (esPar(listMediana.length)) {
-  const element1 =  listMediana[mitadLista - 1];
-  const element2 = listMediana[mitadLista];
+if (esPar(ordenedList.length)) {
+  const element1 =  ordenedList[listToParse - 1];
+  const element2 = ordenedList[listToParse];
   const promedioMediana = calcMediaAritmetica([element1, element2]);
   mediana = promedioMediana;
 } else {
-  const promedioMediana = listMediana[mitadLista]
+  const promedioMediana = ordenedList[listToParse]
   mediana = promedioMediana;
 };
