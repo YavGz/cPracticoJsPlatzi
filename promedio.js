@@ -17,37 +17,74 @@ const calcMediaAritmetica = (list) => {
 // calcMediaAritmetica([n,n,n,n])
 
 
-// Cal mediana 
 
-const listMediana = [
-  200,
-  300,
-  100,
-  600,
-  500,
-  2000,
-];
+// Calc mediana 
 
-const ordenedList = listMediana.sort( (a,b) => a-b ); 
+// const listMediana = [
+//   200,
+//   300,
+//   100,
+//   600,
+//   500,
+//   2000,
+// ];
 
-const listToParse = parseInt(ordenedList.length / 2) ;
+function declararLista(list) {
+  listMediana = list;
+};
 
-const esPar = (number) =>{
-  if (number % 2 === 0) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
+let listMediana;
 let mediana;
 
-if (esPar(ordenedList.length)) {
-  const element1 =  ordenedList[listToParse - 1];
-  const element2 = ordenedList[listToParse];
-  const promedioMediana = calcMediaAritmetica([element1, element2]);
-  mediana = promedioMediana;
-} else {
-  const promedioMediana = ordenedList[listToParse]
-  mediana = promedioMediana;
+function calcularMediana(listMediana) {
+  
+  const ordenedList = listMediana.sort( (a,b) => a-b ); 
+  
+  const listToParse = parseInt(ordenedList.length / 2) ;
+  
+  const esPar = (number) =>{
+    if (number % 2 === 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  
+  
+  if (esPar(ordenedList.length)) {
+    const element1 =  ordenedList[listToParse - 1];
+    const element2 = ordenedList[listToParse];
+    const promedioMediana = calcMediaAritmetica([element1, element2]);
+    mediana = promedioMediana;
+  } else {
+    const promedioMediana = ordenedList[listToParse]
+    mediana = promedioMediana;
+  };
+
+  mediana = mediana;
+  
 };
+  
+  
+  // calcular la moda 
+  
+const listaModa = [
+  1,
+  2,
+  3,
+  3,
+  3,
+  5,
+  6,
+  3,
+  5,
+  3,
+  5,
+  2
+]
+
+listaModa.map(
+  function (params) {
+    
+  }
+);
