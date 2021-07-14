@@ -29,12 +29,14 @@ const calcMediaAritmetica = (list) => {
 //   2000,
 // ];
 
-function declararLista(list) {
-  listMediana = list;
-};
-
 let listMediana;
 let mediana;
+
+function declararLista(list) {
+  listMediana = list;
+  calcularMediana(listMediana);
+  console.log(mediana);
+};
 
 function calcularMediana(listMediana) {
   
