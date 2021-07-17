@@ -83,10 +83,29 @@ const listaModa = [
   3,
   5,
   2
-]
+];
 
+const listaModaCount = {};
+
+// transformar el array a un objeto y ocontar el numero de repeticiones de cada elemento
 listaModa.map(
-  function (params) {
-    
+  function (element) {
+    if (listaModaCount[element]) {
+      listaModaCount[element] += 1;
+    } else {
+      listaModaCount[element] =1;
+    }
   }
 );
+// {1: 1, 2: 2, 3: 5, 5: 3, 6: 1}
+
+// convertir el objeto de nuevo a un array 
+
+const listaModaArray = Object.entries(listaModaCount)
+  .sort(
+    (valorAcumulado, nuevoValor) => {
+    return valorAcumulado[1] - nuevoValor[1];
+  });
+;
+
+const moda = listaModaArray[listaModaArray.length - 1];
