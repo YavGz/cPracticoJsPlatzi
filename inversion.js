@@ -25,3 +25,14 @@ const CalcGananciaIntFijo = () => {
   totalInteresfijo = suma;
   return totalInteresfijo;
 };
+
+function investmentWithCompoundInterest() 
+{
+  let capital = Number(saldoInicial);
+  let tiempo = Number(periodoDeInversion);
+  let tasaDeInteres = Number((tazaDeCrecimientoAnual / 100)/12) ;
+  // Calculamos el monto final con interes compuesto
+  let montoFinal = capital * (1 + tasaDeInteres) ** tiempo;
+  return Number(montoFinal);
+}
+
