@@ -57,11 +57,12 @@ const limpiarImputs = () => {
   const InputSalary = document.getElementById("InputSalary").value = "";
   const interes = document.getElementById("InputTaza").value= "";
   const tiempo = document.getElementById("Tiempo").value = "";
-
   const alert = document.getElementById("AlertResult");
-  
-  alert.className += "d-none"
-  
   const alert2 = document.getElementById("AlertResult2");
+
+  alert.innerText = "";
+  alert.className += " d-none";
+  alert2.innerText = "";
+  alert2.className += " d-none";
 
 }
