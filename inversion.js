@@ -24,7 +24,7 @@ const CalcIntFijo = () => {
 
   const alert = document.getElementById("AlertResult");
   alert.className = "alert alert-primary";
-  alert.innerText = `Tus Ganancias potenciales con interes fijo son $${totalInteresfijo}`;
+  alert.innerText = `Tus total con interes fijo son $${totalInteresfijo.toFixed(2)}`;
   
   return totalInteresfijo;
 
@@ -47,7 +47,7 @@ const CalIntCompuesto = () => {
 
   const alert2 = document.getElementById("AlertResult2");
   alert2.className = "alert alert-primary";
-  alert2.innerText = `Tus Ganancias potenciales con interes compuesto son: $${totalInteresCompuesto}`
+  alert2.innerText = `Tus total con interes compuesto son: $${totalInteresCompuesto.toFixed(2)}`
 
   return totalInteresCompuesto;
 

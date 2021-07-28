@@ -11,36 +11,49 @@
     <title>Simulador de Intereses</title>
   </head>
   <body>
-    <main class="container pt-2">
-      <h2 class="mb-3">Calcula tus ganancias</h2> 
-    <form class="card">
-      <div class="card-body">
-
-        <h5 class="mb-3">Ingresa los datos necesarios</h5>
-        <label for="InputSalary" class="form-label">Saldo a invertir</label>
-        <div class="input-group mb-3">    
-          <span class="input-group-text">$</span>
-          <input id="InputSalary" type="number" class="form-control">
+    <header>
+      <nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid ps-lg-4 ps-4 offset-lg-1">
+          <a class="navbar-brand" href="#">Home</a>
         </div>
-        <label for="InputTaza" class="form-label">Taza de interes anual</label>
-        <div class="mb-3 input-group">
-          <span class="input-group-text">%</span>
-          <input type="number" class="form-control" id="InputTaza">
-        </div>
-        <label for="Tiempo" class="form-label">Periodo de inversion</label>
-        <div class="mb-3 input-group">
-          <input type="number" class="form-control" id="Tiempo" placeholder="Meses">
-        </div>
-        
-        <button type="button" class="btn btn-secondary mb-3" onclick="limpiarImputs()">Limpiar</button>
-        <button type="button" class="btn btn-primary mb-3" onclick="CalcIntFijo(), CalIntCompuesto() ">Calcular</button>
-        
-        <div id="AlertResult" class=" d-none alert alert-primary" role="alert"></div>
-        
-        <div id="AlertResult2" class=" d-none alert alert-primary" role="alert"></div>
-        
+      </nav>
+    </header>
+    <main class="container pt-2 justify-content-center">
+      <div class="container col-12 col-md-8 m-auto text-center">
+        <h2 class="m-auto">Calcula tus ganancias</h2>
+        <p class="mb-3"> O el saldo total que debas pagar. Sea cual sea el interes a agregar, lo puedes hacer.</p>
       </div>
-    </form>
+      <form class="card col-md-8 m-auto">
+        <div class="card-body col-12">
+          <h5 class="mb-3">Ingresa los datos necesarios</h5>
+          <label for="InputSalary" class="form-label">Saldo a invertir</label>
+          <div class="input-group mb-3">    
+            <span class="input-group-text">$</span>
+            <input id="InputSalary" type="number" class="form-control">
+          </div>
+          <label for="InputTaza" class="form-label">Taza de interes anual</label>
+          <div class="mb-3 input-group">
+            <span class="input-group-text">%</span>
+            <input type="number" class="form-control" id="InputTaza">
+          </div>
+          <label for="Tiempo" class="form-label">Periodo de inversion</label>
+          <div class="mb-3 input-group">
+            <input type="number" class="form-control" id="Tiempo" placeholder="Meses">
+          </div>
+          
+          <div class="d-flex justify-content-evenly">
+
+            <button type="button" class="col-4 btn btn-secondary mb-3" onclick="limpiarImputs()">Limpiar</button>
+
+            <button type="button" class="col-4 btn btn-primary mb-3" onclick="CalcIntFijo(), CalIntCompuesto() ">Calcular</button>
+          </div>
+          
+          <div id="AlertResult" class=" d-none alert alert-primary" role="alert"></div>
+          
+          <div id="AlertResult2" class=" d-none alert alert-primary" role="alert"></div>
+          
+        </div>
+      </form>
   </main>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
