@@ -36,8 +36,9 @@ const discountCoupon = () => {
     const precioConDescuento = priceWithOff(priceValue, descuento);
     
     const resultP = document.getElementById("priceResult");
-    resultP.innerText = "El precio con descuento son: $" + precioConDescuento;
-  } 
+    resultP.innerText = "El precio con descuento son: $" + precioConDescuento.toFixed(2);
+    priceResult.className = "alert alert-primary"
+  }
 }  
 
 // Formula para generar precio total
@@ -55,7 +56,8 @@ const calcPriceOffer = () => {
   const total = priceWithOff(priceValue, discountValue);
   // input para respuesta
   const priceResult = document.getElementById("priceResult");
-  priceResult.innerText = `El precio a pagar con el descuento es: $${total} MXN`;
+  priceResult.innerText = `El precio a pagar con el descuento es: $${total.toFixed(2)} MXN`;
+  priceResult.className = "alert alert-primary"
 }
 
 const cleanInputs = () => {
@@ -64,4 +66,5 @@ const cleanInputs = () => {
   const discountInput = document.getElementById("Discount").value = "";
   const priceResult = document.getElementById("priceResult");
   priceResult.innerText = "";
+  priceResult.className = "d-none alert alert-primary";
 }
