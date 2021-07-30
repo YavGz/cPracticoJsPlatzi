@@ -1,12 +1,8 @@
 // ciurculo variables 
 const PI = Math.PI ;
-
-
 // funciones de  cuadrados ----
 const perimetroCuadrado = (lado = 4) => lado * 4;
-
 const ladosCuadrado = (lados = 4) => lados;
-
 const areaCuadrado = ( ladoCuadro = 5 ) => area = ladoCuadro * ladoCuadro;
 
 console.groupEnd();
@@ -56,7 +52,6 @@ const calcularPerimetroCuadrado = () => {
   // llamar a la funcion para el calculo con el valor del input
   const perimetro = perimetroCuadrado(value);
   const result1 = document.getElementById("cubeResult1");
-
   result1.innerText = `El perimetro del cuadrado es:  ${perimetro.toFixed(4)} cm`;
   result1.className = "alert alert-primary p-2 mt-4 mb-0"
 };
@@ -65,12 +60,19 @@ const calcularAreaCuadrado = (params) => {
   const input = document.getElementById("InputCuadrado");
   const value = input.value;
   const area = areaCuadrado(value);
-
   const result2 = document.getElementById("cubeResult2");
-
   result2.innerText = `El área del cuadrado es:  ${area.toFixed(4)} cm²`;
   result2.className = "alert alert-primary p-2 mt-4 mb-0"
+}
 
+const cleanCube = () => {
+  const input = document.getElementById("InputCuadrado").value = "";
+  const result1 = document.getElementById("cubeResult1");
+  result1.innerText = "";
+  result1.className = "d-none"
+  const result2 = document.getElementById("cubeResult2");
+  result2.innerText = "";
+  result2.className = "d-none"
 }
 
 const calcularAlturaTriangulo = () => {
@@ -100,25 +102,45 @@ const calcularPerimetroTriangulo = () => {
   result2.className = "alert alert-primary p-2 mt-4 mb-0"
 }
 
-//function to calculate radio from circle 
+const cleanTriang = () => {
+  const inputP = document.getElementById("inputsTriangulo").value = "";
+  const inputP2 = document.getElementById("ladoTriangulo2").value = "";
+  const inputP3 = document.getElementById("baseTriangulo").value = "";
+  const result1 = document.getElementById("triResult1");
+  result1.innerText = "";
+  result1.className = "d-none"
+  const result2 = document.getElementById("triResult2");
+  result2.innerText = ``;
+  result2.className = "d-none"
+};
+
+
+//function to calculate circle 
 const calcPerimetrocircle = () => {
   const input = document.getElementById("inputCircle");
   const value = input.value;
   const perimetro = circunferencia(value);
-
   const result1 = document.getElementById("circResult1");
   result1.innerText = `El perimetro del circulo es:  ${perimetro.toFixed(4)} cm`;
-  result1.className = "alert alert-primary p-2 mt-4 mb-0"
-
+  result1.className = "alert alert-primary p-2 mt-3 mb-0"
 }
 
 const calcAreaCircle = () => {
   const input = document.getElementById("inputCircle");
   const value = input.value;
   const area = areaCirculo(value);
-
   const result2 = document.getElementById("circResult2");
   result2.innerText = `El área del circulo es:  ${area.toFixed(4)} cm²`;
-  result2.className = "alert alert-primary p-2 mt-4 mb-0"
+  result2.className = "alert alert-primary p-2 mt-3 mb-0"
 
+};
+
+const cleanCirc = () => {
+  const inputCircle = document.getElementById("inputCircle").value = "";
+  const result1 = document.getElementById("circResult1");
+  result1.innerText = "";
+  result1.className = "d-none"
+  const result2 = document.getElementById("circResult2");
+  result2.innerText = "";
+  result2.className = "d-none"
 };

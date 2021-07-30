@@ -1,6 +1,8 @@
 # Curso-Practico-Javascript-Platzi
 Proyectos del curso practico de Javascript de Platzi
 
+Ver el deploy en: https://javier-gt-yav.github.io/cPracticoJsPlatzi/
+
 ## Taller #1: Figuras geométricas
 
 -Primer paso: definir las formulas

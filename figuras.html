@@ -37,6 +37,7 @@
               <input id="InputCuadrado" class="form-control form-group mb-3" type="number" placeholder="Numero">
               <button type="button" class="btn btn-outline-primary col-5 offset-1" onclick="calcularPerimetroCuadrado()">Calcular perímetro</button>
               <button type="button" class="btn btn-outline-secondary col-5"  onclick="calcularAreaCuadrado()">Calcular área</button>
+              <button type="button" class="btn btn-outline-secondary col-4 offset-4 mt-2" onclick="cleanCube()">Limpiar</button>
               <div id="cubeResult1" class="d-none" role="alert">
               </div>
               <div id="cubeResult2" class="d-none" role="alert">
@@ -62,6 +63,7 @@
               </div>
               <button type="button" class="btn btn-outline-primary col-5 offset-1" onclick="calcularAlturaTriangulo()" >Calcular altura</button>
               <button type="button" class="btn btn-outline-secondary col-5" onclick="calcularPerimetroTriangulo()">Calcular perimetro</button>
+              <button type="button" class="btn btn-outline-secondary col-4 offset-4 mt-2" onclick="cleanTriang()">Limpiar</button>
               <div id="triResult1" class="d-none" role="alert">
               </div>
               <div id="triResult2" class="d-none" role="alert">
@@ -83,12 +85,15 @@
               <input id="inputCircle" type="number" class="form-control mb-3 mt-3" placeholder="Radio del circulo">
               <button type="button"  class="btn btn-outline-primary col-5 offset-1" onclick="calcPerimetrocircle()">Calcular perimetro</button>
               <button type="button" class="btn btn-outline-secondary col-5" onclick="calcAreaCircle()">Calcular área</button>
+
+              <button type="button" class="btn btn-outline-secondary col-4 offset-4 mt-2" onclick="cleanCirc()">Limpiar</button>
+
               <div id="circResult1" class="d-none alert alert-primary" role="alert">
               </div>
               <div id="circResult2" class="d-none alert alert-primary" role="alert">
               </div>
             </form>
-            <button type="button" class="btn btn-outline-secondary col-4 offset-4 mt-2" onclick="()">Limpiar</button>
+            
           </div>
 
         </form>
