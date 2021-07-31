@@ -1,6 +1,9 @@
+main {
+  width: fit-content;
+}
 .row-main {
-  height: 90vh;
   display: flex;
+  height: 100%;
   align-items: center;
 }
 .portfolio-link {
