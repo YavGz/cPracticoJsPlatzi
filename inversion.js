@@ -1,7 +1,4 @@
-
 let totalInteresfijo;
-let totalInteresCompuesto;
-
 
 const CalcIntFijo = () => {
 
@@ -31,25 +28,28 @@ const CalcIntFijo = () => {
 };
 
 const CalIntCompuesto = () => {
+  var gananciaCompuesta = 0;
 
   let InputSalary = document.getElementById("InputSalary");
-  let saldoInicial = parseInt( InputSalary.value);
+  let saldo = parseInt( InputSalary.value);
   let tazaDeinteres = document.getElementById("InputTaza");
-  let tazaDeCrecimientoAnual = parseInt(tazaDeinteres.value);
+  let interes = parseFloat(tazaDeinteres.value);
   let tiempo = document.getElementById("Tiempo");
   let periodoDeInversion = parseInt(tiempo.value);
 
-  let interes = (tazaDeCrecimientoAnual / 100 ) / 12;
-
-  let gananciaCompuesta = saldoInicial * (1 + interes ) ** periodoDeInversion;
-
-  totalInteresCompuesto = gananciaCompuesta;
+  for (let i = 0; i < periodoDeInversion; i++) {
+    if (gananciaCompuesta == 0) {
+      const interesASumar =  ( ( saldo * interes ) /100 ) / 12;     
+      gananciaCompuesta = saldo + interesASumar;
+    } else {
+      const interesASumar =  ( ( gananciaCompuesta * interes ) /100 ) / 12;
+      gananciaCompuesta = gananciaCompuesta +interesASumar;
+    };
+  };
 
   const alert2 = document.getElementById("AlertResult2");
   alert2.className = "alert alert-primary";
-  alert2.innerText = `Tus total con interes compuesto son: $${totalInteresCompuesto.toFixed(2)}`
-
-  return totalInteresCompuesto;
+  alert2.innerText = `Tus total con interes compuesto son: $${gananciaCompuesta.toFixed(2)}`
 
 };
 
